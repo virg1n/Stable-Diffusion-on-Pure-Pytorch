@@ -141,7 +141,7 @@ for epoch in range(num_epochs):
 
         with torch.no_grad():
             tokens = tokenizer(list(prompt), padding="max_length", max_length=77,
-                                 truncation=True, return_tensors="pt").input_ids
+                                 truncation=True, return_tensors="pt")
             context = tokens.input_ids.to(device)
             context = clip(context)
 
