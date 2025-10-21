@@ -43,7 +43,6 @@ def generate(prompt, neg_promt="",
         clip = models['clip']
         clip.to(device)
 
-        clip.to(device)
         clip.eval()
         for p in clip.parameters():
             p.requires_grad_(False)
